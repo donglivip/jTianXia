@@ -1,0 +1,25 @@
+<view class='wrapper logistics'>
+  <view class='header'>
+    <view class='input-box'>
+      <image src='../../images/SearchCopy2.png'></image>
+      <input type='text' placeholder='请输入您要查询的地址。如：玉溪' placeholder-style='color:#ffffff'></input>
+    </view>
+  </view>
+  <scroll-view class='main' scroll-y>
+      <view class='logistics-box' wx:for='{{mydata}}' wx:for-index='index' wx:key="unique">
+        <view class='logistics-top' bindtap='showboo' data-index='{{index}}'>
+          <view class='logistics-name'>{{item.name}}</view>
+          <image src='../../images/Arrow_simple_rightt Copy 14.png' class='arr' wx:if='{{item.showdetail==false}}'></image>
+          <image src='../../images/Arrow_simple_rightt.png' class='arr' wx:if='{{item.showdetail!=false}}' style='height:20rpx;width:30rpx'></image>
+        </view>
+        <view class='logistics-text' wx:for='{{item.body_text_list}}' wx:for-item="val" wx:if='{{item.showdetail!=false}}' wx:key="unique">
+            <!-- <view class='box-title'>
+              {{val.title}}:
+            </view> -->
+            <view class='box-text'>
+              {{val}}
+            </view>
+        </view>
+      </view>
+  </scroll-view>
+</view>

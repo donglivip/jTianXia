@@ -1,0 +1,6 @@
+<view class='wrapper myhelp'>
+  <form bindsubmit="formSubmit">
+    <textarea placeholder='请您详细描述您所遇到的问题！' name='fankui_body_text'></textarea>
+     <button formType="submit">提交</button>
+  </form>
+</view>

@@ -1,0 +1,15 @@
+<view class='wrapper'>
+  <scroll-view class='main' scroll-y style='margin:0;height:100%'>
+    <view class='shop-box' bindtap='opennew' data-id='likedetail'>
+      <image src='../../images/index02.png'></image>
+      <view class='shop-main'>
+        <view class='shop-title'>
+        <view>沃尔沃：20</view>
+        <view class='state'>待售</view>
+        </view>
+        <view class='shop-sub'>2009|2666小时|江苏徐州</view>
+        <view class='shop-sub price'>23.0万</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

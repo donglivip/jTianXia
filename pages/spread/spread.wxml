@@ -1,0 +1,34 @@
+<view class='wrapper likedetail'>
+  <scroll-view class='main' style='margin:0' scroll-y>
+    <view class='top'>
+      <image src='{{imgurl + mydata.tg_image}}'></image>
+      <view class='name'>
+        <view class='name-top'>
+          {{mydata.tg_title}}
+        </view>
+        <view class='name-bottom'>
+          {{mydata.tg_body}}
+        </view>
+      </view>
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        转账详细说明
+      </view>
+      <view class='text'>
+        <input placeholder='请填写转账详细说明'></input>
+      </view>
+    </view>
+     <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        推广价格（元/次）
+      </view>
+      <view class='text'>
+        <input placeholder='推广价格  元/次' type='number' value='￥{{mydata.tg_money}}'></input>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='bottom'>
+      <view class='yellow'>付款</view>
+  </view>
+</view>

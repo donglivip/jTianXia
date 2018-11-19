@@ -1,0 +1,25 @@
+/* pages/submit/submit.wxss */
+.submit{
+  background: #f4f4f4
+}
+.submit .submit-box{
+  height: 110rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1rpx solid #f4f4f4
+}
+.submit .logo{
+  width: 45rpx;
+  height: 45rpx;
+  margin: 0 40rpx 0 20rpx
+}
+.submit .text{
+  flex: 1
+}
+.submit .arr{
+  width: 20rpx;
+  height: 30rpx;
+  margin: 0 20rpx
+}

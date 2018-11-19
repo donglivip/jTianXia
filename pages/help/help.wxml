@@ -1,0 +1,21 @@
+<view class='wrapper help'>
+  <view class='help-top' bindtap='opennew' data-id='myhelp'>
+    <image src='../../images/help.png' class='logo'></image>
+    <view>我要求助</view>
+    <image src='../../images/Arrow_simple_rightt Copy 12.png' class='arr'></image>
+  </view>
+  <scroll-view class='main' scroll-y>
+    <block wx:for="{{may_lists}}" wx:key="unique">
+    <view class='help-box' bindtap='opennew' data-id='helpdetail' data-may_index='{{index}}'>
+      <view class='help-name'>
+        <image src='{{item.user_avatars}}' class='avatar'></image>
+        <view class='name'>{{item.user_nicename}}</view>
+        <view class='time'>{{item.create_time}}</view>
+      </view> 
+      <view class='text'>
+        {{item.may_body}}
+      </view>
+    </view>
+    </block>
+  </scroll-view>
+</view>

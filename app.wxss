@@ -1,0 +1,29 @@
+page,.wrapper{
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx
+}
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80rpx
+}
+.main{
+  width: 100%;
+  height: calc(100% - 80rpx);
+  margin-top: 80rpx
+}
+.big-box image {
+  width: 70rpx!important;
+  height:70rpx!important;
+}
+.textarae{
+  height: 90rpx;
+  border: 1rpx solid #f4f4f4;
+  text-align: left;
+  margin: 20rpx 10rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx
+}
+.height100{height: 150rpx}

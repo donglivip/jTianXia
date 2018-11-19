@@ -1,0 +1,89 @@
+<scroll-view class='wrapper list' scroll-y>
+  <view class='list-box'>
+    <view class='list-item' bindtap='opennew' data-id='shopdetail'>
+      <image src='../../images/index02.png'></image>
+      <view class='title'>
+        这里是标题
+      </view>  
+      <view class='subtitle'>
+        这里是副标题或介绍内容
+      </view>
+      <view class='price'>
+        ￥24
+      </view>
+    </view>
+    <view class='list-item' bindtap='opennew' data-id='shopdetail'>
+      <image src='../../images/index02.png'></image>
+      <view class='title'>
+        这里是标题
+      </view>  
+      <view class='subtitle'>
+        这里是副标题或介绍内容
+      </view>
+      <view class='price'>
+        ￥24
+      </view>
+    </view>
+    <view class='list-item' bindtap='opennew' data-id='shopdetail'>
+      <image src='../../images/index02.png'></image>
+      <view class='title'>
+        这里是标题
+      </view>  
+      <view class='subtitle'>
+        这里是副标题或介绍内容
+      </view>
+      <view class='price'>
+        ￥24
+      </view>
+    </view>
+    <view class='list-item' bindtap='opennew' data-id='shopdetail'>
+      <image src='../../images/index02.png'></image>
+      <view class='title'>
+        这里是标题
+      </view>  
+      <view class='subtitle'>
+        这里是副标题或介绍内容
+      </view>
+      <view class='price'>
+        ￥24
+      </view>
+    </view>
+    <view class='list-item' bindtap='opennew' data-id='shopdetail'>
+      <image src='../../images/index02.png'></image>
+      <view class='title'>
+        这里是标题
+      </view>  
+      <view class='subtitle'>
+        这里是副标题或介绍内容
+      </view>
+      <view class='price'>
+        ￥24
+      </view>
+    </view>
+    <view class='list-item'>
+      <image src='../../images/index02.png'></image>
+      <view class='title'>
+        这里是标题
+      </view>  
+      <view class='subtitle'>
+        这里是副标题或介绍内容
+      </view>
+      <view class='price'>
+        ￥24
+      </view>
+    </view>
+    <view class='list-item'>
+      <image src='../../images/index02.png'></image>
+      <view class='title'>
+        这里是标题
+      </view>  
+      <view class='subtitle'>
+        这里是副标题或介绍内容
+      </view>
+      <view class='price'>
+        ￥24
+      </view>
+    </view>
+
+  </view>
+</scroll-view>

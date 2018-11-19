@@ -1,0 +1,65 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='wrapper likedetail'>
+  <scroll-view class='main' style='margin:0' scroll-y>
+    <swiper indicator-dots='true' indicator-active-color='#FF9222' autoplay='3000'>
+      <swiper-item>
+        <image src="{{imgurl + shangjia['shangjia_img_path']}}"></image>
+      </swiper-item>
+      <!--swiper-item>
+        <image src='../../images/index01.png'></image>
+      </swiper-item>
+      <swiper-item>
+        <image src='../../images/index01.png'></image>
+      </swiper-item-->
+    </swiper>
+    <view class='title'>
+      {{shangjia['shangjia_title']}}
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        店铺内容
+      </view>
+      <view class='text'>
+        {{shangjia['shangjia_name']}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title'>
+        具体地址
+      </view>
+      <view class='text'>
+        {{shangjia['shangjia_address']}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title'>
+        联系人
+      </view>
+      <view class='text'>
+        {{shangjia['shangjia_contact_name']}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title' bindtap='callman'>
+        联系电话
+      </view>
+      <view class='text'>
+        {{shangjia['shangjia_phone']}}
+      </view>
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        商家详情
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title' style='height:auto;padding:0 20rpx'>
+       <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='bottom'>
+    <view class='yellow' bindtap='callman' data-phone="{{shangjia['shangjia_phone']}}">拨打电话</view>
+    <view>发送短信</view>
+  </view>
+</view>

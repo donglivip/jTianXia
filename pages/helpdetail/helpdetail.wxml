@@ -1,0 +1,33 @@
+<view class='wrapper help'>
+  <scroll-view class='main' scroll-y>
+    <view class='help-box'>
+      <view class='help-name'>
+        <image src='{{may_data.user_avatars}}' class='avatar'></image>
+        <view class='name'>{{may_data.user_nicename}}</view>
+        <view class='time'>{{may_data.create_time}}</view>
+      </view> 
+      <view class='text'>
+        {{may_data.may_body}}
+      </view>
+    </view>
+    <view class='name title'>求助回复</view>
+    <block wx:for="{{may_hf_lists}}" wx:key="unique">
+    <view class='help-box'>
+      <view class='help-name'>
+        <image src='{{item.user_avatars}}' class='avatar'></image>
+        <view class='name'>{{item.user_nicename}}</view>
+        <!--view class='time'>
+          <view class='answer'>回复</view>
+        </view-->
+      </view>
+      <view class='text'>
+        {{item.may_body}}
+      </view>
+    </view>
+    </block>
+  </scroll-view>
+  <view class='bottom'>
+    <input placeholder='请输入您要回复的内容' bindinput='inputblur'></input>
+    <button class='submit' bindtap='submit'>回复</button>
+  </view>
+</view>

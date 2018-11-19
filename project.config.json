@@ -1,0 +1,100 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.3",
+	"appid": "wx436a3cb31941c99a",
+	"projectname": "jtx_x",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 9,
+			"list": [
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "合作",
+					"pathName": "pages/teamwork/teamwork",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "合作人详情",
+					"pathName": "pages/teamworkdetail/teamworkdetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发布详情",
+					"pathName": "pages/submitdetail/submitdetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发布",
+					"pathName": "pages/submitdetail02/submitdetail02",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "用户中心",
+					"pathName": "pages/usercenter/usercenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "历史",
+					"pathName": "pages/history/history",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "列表",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "合作",
+					"pathName": "pages/teamwork/teamwork",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "物流",
+					"pathName": "pages/logistics/logistics"
+				}
+			]
+		}
+	}
+}

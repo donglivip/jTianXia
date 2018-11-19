@@ -1,0 +1,46 @@
+/* pages/logistics/logistics.wxss */
+.header{
+   background : #FF9222;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center
+}
+.header image{
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0 20rpx
+}
+.input-box{
+   width:calc(100% - 40rpx);
+   display: flex;
+   align-items: center;
+   height: 60rpx;
+   border-bottom: 1rpx solid #ffffff
+}
+.logistics-top{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #f4f4f4
+}
+.logistics-top image{
+  width: 20rpx;
+  height: 30rpx;
+  margin: 0 20rpx
+}
+.logistics-top .logistics-name{
+  flex: 1;
+  margin: 0 20rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+.logistics-text{
+  display: flex;
+  width: calc(100% - 40rpx);
+  margin: 5rpx auto
+}
+.box-title{
+  margin-right: 10rpx
+}

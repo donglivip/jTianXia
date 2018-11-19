@@ -1,0 +1,28 @@
+<scroll-view class='wrapper list' scroll-y>
+  <view class='list-top' bindtap='opennew' data-id='adress'>
+    <view>地区</view>
+    <image src='../../images/arrright02.png'></image>
+  </view>
+  <view class='list-box'>
+    <block wx:for="{{xinxi_lists}}" wx:key="unique">
+    <view class='list-item' bindtap='opennew' data-id='shopdetail' data-fbid='{{item.fb_id}}' data-title='{{title}}'>
+      <view class='img-box'>
+        <!--image src='../../images/Group10@3x.png' class='mark02'></image-->
+        <image src='{{imgurl+item.fb_img}}'></image>
+        <!--view class='mark'>
+          待售
+        </view-->
+      </view>
+      <view class='title'>
+        {{item.fb_title}}
+      </view>  
+      <view class='subtitle'>
+        {{item.fbc1_shichang}}  {{item.region_show_text}}
+      </view>
+      <view class='price'>
+        {{item.fb_price}}
+      </view>
+    </view>
+    </block>
+  </view>
+</scroll-view>

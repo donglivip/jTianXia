@@ -1,0 +1,18 @@
+<view class='wrapper'>
+  <scroll-view class='main' scroll-y style='margin:0;height:100%'>
+    <block wx:for="{{shangjia_lists}}" wx:key="unique">
+    <view class='shop-box' bindtap='opensj' data-id='likedetail' data-name="{{index}}">
+      <image src="{{imgurl + item['shangjia_img_path']}}"></image>
+      <view class='shop-main'>
+        <view class='shop-title'>{{item['shangjia_title']}}</view>
+        <view class='shop-sub'>店铺名称：{{item['shangjia_name']}}</view>
+        <!--view class='shop-sub'>商家详情：XXXXXXX</view-->
+        <view class='shop-sub'>
+          <view>地址：{{item['shangjia_address']}}</view>
+          <!--view>518km</view-->
+        </view>
+      </view>
+    </view>
+    </block>
+  </scroll-view>
+</view>

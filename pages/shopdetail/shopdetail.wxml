@@ -1,0 +1,68 @@
+<view class='wrapper likedetail'>
+  <scroll-view class='main' style='margin:0' scroll-y>
+    <swiper indicator-dots='true' indicator-active-color='#FF9222' autoplay='3000'>
+      <block wx:for="{{shopdata['imagelist']}}" wx:key="unique">
+      <swiper-item>
+        <image src='{{imgurl+item}}'></image>
+      </swiper-item>
+      </block>
+    </swiper>
+    <view class='title'>
+      {{shopdata.shopname}}
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        店铺内容
+      </view>
+      <view class='text'>
+        {{shopdata.fb_body}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title'>
+        具体地址
+      </view>
+      <view class='text'>
+        {{shopdata.region_show_text}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title'>
+        联系人
+      </view>
+      <view class='text'>
+        {{shopdata.fb_contact}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title' bindtap='callman'>
+        联系电话
+      </view>
+      <view class='text'>
+        {{shopdata.fb_contact_phone}}
+      </view>
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        商家详情
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title' style='height:auto;padding:0 20rpx'>
+        {{shopdata.fb_body}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class='bottom'>
+    <view class='img-box'>
+      <image src='../../images/Like-3Copy2S.png' wx:if='{{shopdata.good==1}}'></image>
+      <image src='../../images/Like-3.png' wx:if='{{shopdata.good==0}}'></image>
+    </view>
+    <view class='img-box'>
+      <image src='../../images/Like-3Copy4D.png' wx:if='{{shopdata.good==2}}'></image>
+      <image src='../../images/Like-3Copy.png' wx:if='{{shopdata.good==0}}'></image>
+    </view>
+    <view class='yellow' bindtap='openphone' data-phone='{{shopdata.fb_contact_phone}}'>拨打电话</view>
+    <view>发送短信</view>
+  </view>
+</view>

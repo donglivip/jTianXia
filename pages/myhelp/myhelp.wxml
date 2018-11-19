@@ -1,0 +1,6 @@
+<view class='wrapper myhelp'>
+  <form bindsubmit="formBindsubmit">
+    <textarea name='qiuzhu_text' placeholder='请您详细描述您所遇到的问题！'></textarea>
+     <button formType="submit">确认求助</button>
+  </form>
+</view>

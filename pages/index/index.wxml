@@ -1,0 +1,93 @@
+<view class='wrapper'>
+  <view class='header'>
+    <view class='adress-box'  bindtap='opennew' data-id='adress'>
+      <view>{{city_default['city_name']}}</view>
+      <image src='../../images/arrbottom.png'></image>
+    </view>
+    <view class='input-box'>
+      <image src='../../images/SearchCopy2.png'></image>
+      <input placeholder='请输入您要搜索的内容' placeholder-style="color:#fff;" bindblur='opennew' data-id='search'></input>
+    </view>
+  </view>
+  <scroll-view class='main' scroll-y>
+    <swiper indicator-dots='true' indicator-active-color='#FF9222' autoplay='3000'>
+      <block wx:for="{{banner}}" wx:key="unique">
+      <swiper-item>
+        <image src='{{imgurl+item.banner_img}}'></image>
+      </swiper-item>
+      </block>
+    </swiper>
+    <view class='nav'>
+      <block wx:for="{{nav}}" wx:key="unique">
+      <view class='nav-item' bindtap='opennav' data-id='list' data-name='{{item.category_name}}' data-flid='{{item.category_id}}'>
+        <image src='{{imgurl+item.category_img_path}}'></image>
+        <view>{{item.category_name}}</view>
+      </view>
+      </block>
+      <view class='nav-item' bindtap='opennew' data-id='alllist'>
+        <image src='../../images/Group9.png'></image>
+        <view>更多分类</view>
+      </view>
+    </view>
+    <view class='box' bindtap='opennew' data-id='logistics'>
+      <image src='../../images/wuliu.png' style='height:40rpx'></image>
+      <view class='box-main'>
+        <view class='title'>物流网点</view>
+      </view>
+    </view>
+     <view class='box' bindtap='opennew' data-id='help'>
+      <image src='../../images/help.png'></image>
+      <view class='box-main'>
+        <view class='title'>求助</view>
+        <view class='subtitle'>把您的问题，提交给我们</view>
+      </view>
+    </view>
+     <view class='box' wx:if="{{hezuo!=''}}">
+      <image src='{{imgurl + hezuo.hezuo_head}}' class='realname'></image>
+      <view class='box-main'>
+        <view class='real'>官方认证</view>
+        <view class='subtitle'>区域经理 {{hezuo.hezuo_name}}</view>
+      </view>
+      <view class='callman' bindtap='callman'>
+        联系经理
+      </view>
+    </view>
+    <view class='adver01'>
+      <view class='adver-box' bindtap='openimgad' data-id='likedetail' data-name="1">
+        <view class='adver-title'>{{img_ad1[0]['shangjia_title']}}</view>
+        <view class='adver-text'></view>
+        <image src="{{imgurl + img_ad1[0]['shangjia_img_path']}}"></image>
+      </view>
+      <view class='adver-box' bindtap='openimgad' data-id='likedetail' data-name="2">
+        <view class='adver-title'>{{img_ad2[0]['shangjia_title']}}</view>
+        <view class='adver-text'></view>
+        <image src="{{imgurl + img_ad2[0]['shangjia_img_path']}}"></image>
+      </view>
+    </view>
+    <view class='adver01' bindtap='openimgad' data-id='likedetail' data-name="3">
+      <view class='adver-box'>
+        <view class='adver-title'>{{img_ad3[0]['shangjia_title']}}</view>
+        <view class='adver-text'></view>
+        <image src="{{imgurl + img_ad3[0]['shangjia_img_path']}}"></image>
+      </view>
+    </view>
+    <view class='mytitle' bindtap='opennew' data-id='likelist'>
+      <view>猜你喜欢</view>
+      <image src='../../images/arrright02.png'></image>
+    </view>
+    <block wx:for="{{shangjia_lists}}" wx:key="unique">
+    <view class='shop-box' bindtap='opensj' data-id='likedetail' data-name="{{index}}">
+      <image src="{{imgurl + item['shangjia_img_path']}}"></image>
+      <view class='shop-main'>
+        <view class='shop-title'>{{item['shangjia_title']}}</view>
+        <view class='shop-sub'>店铺名称：{{item['shangjia_name']}}</view>
+        <!--view class='shop-sub'>商家详情：{{item['shangjia_details']}}</view-->
+        <view class='shop-sub'>
+          <view>地址：{{item['shangjia_address']}}</view>
+          <!--view>518km</view-->
+        </view>
+      </view>
+    </view>
+    </block>
+  </scroll-view>
+</view>

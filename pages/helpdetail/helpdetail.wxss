@@ -1,0 +1,92 @@
+/* pages/help/help.wxss */
+.help{
+  background: #f4f4f4
+}
+.help-top{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background: #ffffff
+}
+.help-top .logo{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 20rpx
+}
+.help-top .arr{
+  width: 20rpx;
+  height: 30rpx;
+  margin: 0 20rpx
+}
+.help-top view{
+  font-size: 35rpx;
+  flex: 1
+}
+.main{
+  margin: 0
+}
+.help-box{
+  background: #ffffff;
+  padding-bottom: 40rpx
+}
+.help-name{
+  display: flex;
+  align-items: center;
+  height: 100rpx
+}
+.avatar{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin: 0 20rpx
+}
+.name{
+  flex: 1;
+  font-size: 30rpx
+}
+.time{
+  margin: 0 20rpx
+}
+.text{
+ margin: 0 30rpx;
+ font-size: 25rpx;
+ line-height: 30rpx
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  height: 80rpx;
+  bottom: 0
+}
+.bottom input{
+  flex: 1;
+  border-bottom: 4rpx solid #FF9222;
+  margin-left: 20rpx;
+  text-indent: 20rpx
+}
+.submit{
+  background: #FF9222;
+  color: #ffffff;
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  line-height: 60rpx;
+  font-size: 25rpx;
+  margin: 0 20rpx
+}
+.title{
+  border-bottom: 1rpx solid #f4f4f4;
+  line-height: 80rpx;
+  text-indent: 20rpx;
+  background: #ffffff;
+  margin-top: 20rpx
+}
+.answer{
+  border: 1rpx solid #FF9222;
+  color: #FF9222;
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx
+}

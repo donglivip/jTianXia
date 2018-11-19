@@ -1,0 +1,22 @@
+<view class='wrapper likedetail'>
+  <scroll-view class='main' style='margin:0' scroll-y>
+    <view class='top'>
+      <image src='{{imgurl + mydata.hezuo_head}}'></image>
+      <view class='name'>{{mydata.hezuo_name}}</view>
+      <view class='state'>官方认证</view>
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        详情
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title' style='height:auto;padding:0 20rpx'>
+        {{mydata.hezuo_body}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class='bottom' bindtap='callman'>
+      <view class='yellow'>拨打电话</view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+/* pages/aboutus/aboutus.wxss */
+.aboutus-top{
+  height: 100rpx;
+  border-bottom: 1rpx solid #f4f4f4;
+  line-height: 100rpx;
+  text-indent: 30rpx;
+  font-size: 35rpx
+}
+text{
+  width: calc(100% - 60rpx);
+  margin-left: 30rpx;
+  display: block;
+  
+}

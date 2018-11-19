@@ -1,0 +1,9 @@
+<view class='wrapper submit'>
+  <block wx:for="{{category_list}}" wx:key="unique">
+  <view class='submit-box' bindtap='opennew' data-id='{{item.category_info_model_2}}' data-name='{{item.category_name}}' data-category_id='{{item.category_id}}'>
+    <image src='{{imgurl+item.category_img_path2}}' class='logo'></image>
+    <view class='text'>{{item.category_name}}</view>
+    <image src='../../images/arrright02.png' class='arr'></image>
+  </view>
+  </block>
+</view>

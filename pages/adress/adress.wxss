@@ -1,0 +1,30 @@
+/* pages/adress/adress.wxss */
+.adress{
+ background: #f4f4f4;
+ display: flex
+}
+.adress-one{
+  height: 100%;
+  width: 700rpx;
+  border-right: 1rpx solid gainsboro
+}
+.one-item{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.active{
+  background: #ffffff
+}
+.adress-one .active{
+  border-left: 5rpx solid #FF9222
+}
+.adress-two{
+  width: 700rpx;
+  border-right: 1rpx solid gainsboro
+}
+.adress-three{
+   width: 700rpx;
+}

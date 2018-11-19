@@ -1,0 +1,28 @@
+<view class='wrapper userccenter'>
+ <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称</button>
+  <view class='usertop' bindtap='opennew' data-id='setting' wx:else>
+    <image src='{{userInfo.avatarUrl}}' class='avatar'></image>
+    <view class='name'>{{userInfo.nickName}}</view>
+    <image src='../../images/arrright.png' class='arr'></image>
+  </view>
+  <view class='user-box' bindtap='opennew' data-id='submithistory'>
+    <view class='text'>发布历史</view>
+    <image src='../../images/Arrow_simple_rightt Copy 12.png'></image>
+  </view>
+   <view class='user-box' bindtap='opennew' data-id='history'>
+    <view class='text'>消费记录</view>
+    <image src='../../images/Arrow_simple_rightt Copy 12.png'></image>
+  </view>
+   <view class='user-box' bindtap='opennew' data-id='feedback'>
+    <view class='text'>意见反馈</view>
+    <image src='../../images/Arrow_simple_rightt Copy 12.png'></image>
+  </view>
+   <view class='user-box' bindtap='opennew' data-id='aboutus'>
+    <view class='text'>关于我们</view>
+    <image src='../../images/Arrow_simple_rightt Copy 12.png'></image>
+  </view>
+   <view class='user-box' bindtap='callman'>
+    <view class='text'>联系我们</view>
+     <view class='subtitle'>15252163775</view>
+  </view>
+</view>

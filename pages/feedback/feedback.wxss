@@ -1,0 +1,17 @@
+/* pages/myhelp/myhelp.wxss */
+.myhelp{
+  background: #f4f4f4
+}
+textarea{
+  width: 100%;
+  height: 300rpx;
+  background: #ffffff;
+  padding: 20rpx
+}
+button{
+  background: #FF9222;
+  color: #ffffff;
+  margin:40rpx 20rpx;
+  height: 90rpx;
+  line-height: 90rpx
+}

@@ -1,0 +1,175 @@
+<scroll-view class='wrapper likedetail' scroll-y>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='box' style='margin-top:20rpx'>
+    <view class='title'>
+      上传图片（最多10张）
+    </view>
+  </view>
+  <view class='box big-box'>
+    <view class='title_img'>
+    <block wx:for="{{upload_img_path1}}" wx:key="unique">
+    <image src='{{item}}'></image>
+    </block>
+      <image src='../../images/addimg.png' bindtap='changeimg'></image>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      标题
+    </view>
+    <view class='text'>
+      <input placeholder='标题' name='fb_title'></input>
+    </view>
+  </view>
+  <view class='box' style='margin-top:20rpx'>
+    <view class='title'>
+      设备信息
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      价格（元/公里）
+    </view>
+    <view class='text'>
+      <input placeholder='请输入价格 元' name='fb_price'></input>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      车辆类型
+    </view>
+    <view class='text'>
+      <input placeholder='请输入设备类型 如：挖掘机' name='fbc4_car_type'></input>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      品牌型号
+    </view>
+    <view class='text'>
+      <input placeholder='请输入品牌型号 如：小松60-7' name='fbc4_pin_type'></input>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      载重质量
+    </view>
+    <view class='text'>
+      <input placeholder='请输入载重质量' name='fbc4_zzzl'></input>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      设备所在地
+    </view>
+    <view class='text'>
+      <input placeholder='请选择设备所在地' bindtap='selectDistrict' value='{{areaInfo}}' disabled='disabled'></input>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      出厂日期
+    </view>
+    <view class='text'>
+      <picker mode="date" value="{{date}}" start="1978-01-01" end="2017-1-23" bindchange="bindDateChange">
+        <view class="picker">
+          <input placeholder='点击选择日期' value='{{dates}}' name='fbc4_cc_date'></input>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      里程表（公里）
+    </view>
+    <view class='text'>
+      <input type='number' placeholder='请填写里程表（公里）' name='fbc4_licheng'></input>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      状态
+    </view>
+    <view class='text'>
+      <picker mode="selector" range="{{array}}" bindchange="bindPickerChange">
+        <view class="picker">
+          <input placeholder='选择类型' value='{{array[index]}}' name='fbc4_state'></input>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='box' style='margin-top:20rpx'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      今日顺风车
+    </view>
+    <view class='text'>
+    </view>
+  </view>
+  <view class='box' style='height:auto'>
+    <view class='text' style='height:auto'>
+      <input placeholder='请输入顺风车方向，如：昆明到玉溪'  wx:if='{{!addressMenuIsShow}}' name='fb_body' class='textarae'></input>
+    </view>
+  </view>
+  <view class='box' style='margin-top:20rpx'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+      联系人信息
+    </view>
+    <view class='text'>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+     联系人电话
+    </view>
+    <view class='text'>
+      <input type='number' placeholder='请填写联系人电话' name='fb_contact_phone'></input>
+    </view>
+  </view>
+  <view class='box'>
+    <view class='title' style='height:auto;margin:0 20rpx'>
+    联系人姓名
+    </view>
+    <view class='text'>
+      <input type='text' placeholder='请填写联系人姓名' name='fb_contact'></input>
+    </view>
+  </view>
+  <view class='box' style='margin-bottom:120rpx;color:#f4f4f4f;background:none'>
+    <view class='title' style='height:auto;margin:0 20rpx;background:none'>
+      <image src='../../images/Group2CopyQW.png' wx:if='{{radio}}' bindtap='radiochange'></image>
+      <image src='../../images/Group2WQ.png' wx:if='{{!radio}}' bindtap='radiochange'></image>
+    </view>
+    <view class='text' style='text-align:left;height:80rpx;line-height:60rpx'>
+      我已阅读并同意发布协议
+    </view>
+  </view>
+  <view class='height100'></view>
+  <button class='bottom' formType="submit">
+    确认发布
+  </button>
+  </form>
+  <!-- 时间选择 -->
+  <!-- 蒙层 -->
+  <view class="dialog-mask " style="z-index:11;visibility:{{addressMenuIsShow ? 'visible': 'hidden'}}" bindtap="hideCitySelected" />
+  <!-- 三级联动 -->
+  <view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+    <view style="height:10% ;width:95%;margin-top:10rpx">
+      <text catchtap="cityCancel">取消</text>
+      <text style="float: right" catchtap="citySure">确定</text>
+    </view>
+    <!--"可以显示默认的城市，使用后级联选择城市反应很慢就不使用了-->
+    <picker-view style="width: 100%; height: 300rpx;" bindchange="cityChange" value="{{value}}" wx:key="">
+      <picker-view-column>
+        <view wx:for="{{provinces}}" class="picker-item" wx:key="unique">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{citys}}" class="picker-item" wx:key="" wx:key="unique">
+          {{item.name}}</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{areas}}" class="picker-item" wx:key="" wx:key="unique">
+          {{item.name}}</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</scroll-view>

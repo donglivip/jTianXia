@@ -1,0 +1,10 @@
+<view class='wrapper userccenter'>
+  <view class='usertop'>
+    <view class='name'>头像</view>
+    <image src='../../images/Rectangle.png' class='avatar'></image>
+  </view>
+   <view class='user-box' bindtap='callman'>
+    <view class='text'>昵称</view>
+     <view class='subtitle'>未来需要自己创造</view>
+  </view>
+</view>

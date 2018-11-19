@@ -1,0 +1,71 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search/search",
+    "pages/adress/adress",
+    "pages/setting/setting",
+    "pages/submithistory/submithistory",
+    "pages/history/history",
+    "pages/feedback/feedback",
+    "pages/aboutus/aboutus",
+    "pages/submitdetail04/submitdetail04",
+    "pages/submitdetail03/submitdetail03",
+    "pages/submitdetail02/submitdetail02",
+    "pages/submitdetail/submitdetail",
+    "pages/submitdetail2/submitdetail2",
+    "pages/submitdetail3/submitdetail3",
+    "pages/submitdetail4/submitdetail4",
+    "pages/submitdetail5/submitdetail5",
+    "pages/spread/spread",
+    "pages/teamworkdetail/teamworkdetail",
+    "pages/alllist/alllist",
+    "pages/shopdetail/shopdetail",
+    "pages/likedetail/likedetail",
+    "pages/likelist/likelist",
+    "pages/helpdetail/helpdetail",
+    "pages/myhelp/myhelp",
+    "pages/help/help",
+    "pages/logistics/logistics",
+    "pages/list/list",
+    "pages/submit/submit",
+    "pages/teamwork/teamwork",
+    "pages/usercenter/usercenter"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FF9222",
+    "navigationBarTitleText": "甲天下",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "selectedColor": "#FF9222",
+    "color":"#A3A3A3",
+    "backgroundColor":"#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath":"./images/HomeCopy.png",
+        "iconPath": "./images/HomeCopyHUI.png"
+      },
+      {
+        "pagePath": "pages/submit/submit",
+        "text": "免费发布",
+        "selectedIconPath": "./images/Edit-2active.png",
+        "iconPath": "./images/Edit-2 Copy.png"
+      },
+      {
+        "pagePath": "pages/teamwork/teamwork",
+        "text": "我要合作",
+        "selectedIconPath": "./images/Chart-12YOUSE.png",
+        "iconPath": "./images/Chart-12.png"
+      } ,
+      {
+        "pagePath": "pages/usercenter/usercenter",
+        "text": "个人中心",
+        "selectedIconPath": "./images/User CopyYOUSE .png",
+        "iconPath": "./images/User Copy.png"
+      }
+    ]
+  }
+}

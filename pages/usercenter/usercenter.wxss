@@ -1,0 +1,48 @@
+/* pages/usercenter/usercenter.wxss */
+.usertop{
+  background: #FF9222;
+  height: 250rpx;
+  display: flex;
+  align-items: center
+}
+.avatar{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  margin: 0 30rpx 0 30rpx
+}
+.arr{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx
+}
+.name{
+  flex: 1;
+  color: #ffffff;
+  font-size: 36rpx;
+  font-weight: 600
+}
+.user-box{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1rpx solid #f4f4f4
+}
+.user-box image{
+  width: 20rpx;
+  height: 30rpx;
+  margin-right: 30rpx
+}
+.userccenter{
+  background: #f4f4f4
+}
+.text{
+  flex: 1;
+  margin-left: 30rpx;
+  font-size: 32rpx
+}
+.subtitle{
+  color: #999999;
+  margin-right: 30rpx
+}

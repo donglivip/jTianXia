@@ -1,0 +1,17 @@
+<view class='wrapper'>
+  <scroll-view class='main' scroll-y style='margin:0;height:100%'>
+    <view class='shop-box' bindtap='opennew' data-id='likedetail'>
+      <view class='shop-main'>
+        <view class='shop-title'>
+        <view>订单编号：5565255</view>
+        <view class='price'>￥56</view>
+        </view>
+        <view class='shop-sub'>推广项目：沃尔沃2</view>
+        <view class='shop-sub'>订单负责人：王伟</view>
+        <view class='shop-sub'>负责人手机号：156623352</view>
+        <view class='shop-sub'>付款时间：2018-06-15</view>
+        <view class='shop-sub'>付款原因：XXXXXXXXXXXXXXXXXXXXX</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
