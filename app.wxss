@@ -11,7 +11,7 @@ page,.wrapper{
 }
 .main{
   width: 100%;
-  height: calc(100% - 80rpx);
+  height:100%;
   margin-top: 80rpx
 }
 .big-box image {

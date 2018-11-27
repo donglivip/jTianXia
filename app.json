@@ -27,6 +27,7 @@
     "pages/help/help",
     "pages/logistics/logistics",
     "pages/list/list",
+    "pages/list02/list02",
     "pages/submit/submit",
     "pages/teamwork/teamwork",
     "pages/usercenter/usercenter"

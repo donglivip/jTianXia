@@ -1,7 +1,8 @@
 <scroll-view class='wrapper list' scroll-y>
-  <view class='list-top' bindtap='opennew2' data-id='adress'>
-    <view>地区</view>
-    <image src='../../images/arrright02.png'></image>
+  <view class='list-top'>
+    <view class="tcenter {{mytype==1?'active':''}}" bindtap='changeindex' data-id='1'>工程项目</view>
+    <view class="tcenter {{mytype==2?'active':''}}" bindtap='changeindex' data-id='2'>招聘</view>
+    <view class="tcenter {{mytype==3?'active':''}}" bindtap='changeindex' data-id='3'>求职</view>
   </view>
   <view class='list-box'>
     <block wx:for="{{xinxi_lists}}" wx:key="unique">

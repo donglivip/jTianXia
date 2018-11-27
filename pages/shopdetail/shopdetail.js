@@ -29,6 +29,41 @@ Page({
       phoneNumber: '1340000' //仅为示例，并非真实的电话号码
     })
   },
+  zan: function (event){
+    var fb_id = event.currentTarget.dataset.fbid
+    var fb_type = event.currentTarget.dataset.fbtype
+    var that = this
+    //console.log(that.data.shopdata) praise stamp
+    var shopdata = that.data.shopdata
+    //赞、踩
+    wx.request({
+      url: app.globalData.apiUrl + '/api/fbapi/praise_stamp',
+      method: 'post',
+      data: { "fb_id": fb_id, "type": fb_type},
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        if (res.statusCode = 200) {
+          console.log(fb_type)
+          if (fb_type == 'praise'){
+            shopdata.good = 1
+          }
+
+          if (fb_type == 'stamp') {
+            shopdata.good2 = 1
+          }
+          
+          that.setData({
+            shopdata: shopdata
+          })
+        }
+        console.log(res.data)
+      }
+    })
+    
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -49,8 +84,11 @@ Page({
         'content-type': 'application/json'
       },
       success: function (res) {
-        if (res.data.statusCode = 200) {
-          console.log(res.data)
+        if (res.statusCode = 200) {
+          res.data.good = 0
+          res.data.good2 = 0
+          res.data.gs_name = res.data.fbc5_name || res.data.fbc6_name || res.data.fbc7_name || res.data.fbc8_name || res.data.fbc9_name
+          res.data.xx_address = res.data.fbc5_address || res.data.fbc6_address || res.data.fbc7_address || res.data.fbc8_address || res.data.fbc9_address
           that.setData({
             shopdata: res.data
           })
@@ -69,7 +107,7 @@ Page({
 
   /**
    * 生命周期函数--监听页面显示
-   */
+   */  
   onShow: function () {
 
   },

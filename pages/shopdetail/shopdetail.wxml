@@ -8,19 +8,36 @@
       </block>
     </swiper>
     <view class='title'>
-      {{shopdata.shopname}}
+      {{shopdata.fb_title}}
+    </view>
+    <view class='title' style='font-size:20rpx'>
+      {{shopdata.fb_create_time}}
     </view>
     <view class='box' style='margin-top:20rpx'>
       <view class='title'>
-        店铺内容
-      </view>
-      <view class='text'>
-        {{shopdata.fb_body}}
+        商家信息
       </view>
     </view>
     <view class='box'>
       <view class='title'>
+        店铺/公司名称
+      </view>
+      <view class='text'>
+        {{shopdata.gs_name}}
+      </view>
+
+    </view>
+    <view class='box'>
+      <view class='title'>
         具体地址
+      </view>
+      <view class='text'>
+        {{shopdata.xx_address}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title'>
+        经营所在地
       </view>
       <view class='text'>
         {{shopdata.region_show_text}}
@@ -32,14 +49,6 @@
       </view>
       <view class='text'>
         {{shopdata.fb_contact}}
-      </view>
-    </view>
-    <view class='box'>
-      <view class='title' bindtap='callman'>
-        联系电话
-      </view>
-      <view class='text'>
-        {{shopdata.fb_contact_phone}}
       </view>
     </view>
     <view class='box' style='margin-top:20rpx'>
@@ -55,14 +64,16 @@
   </scroll-view>
   <view class='bottom'>
     <view class='img-box'>
-      <image src='../../images/Like-3Copy2S.png' wx:if='{{shopdata.good==1}}'></image>
-      <image src='../../images/Like-3.png' wx:if='{{shopdata.good==0}}'></image>
+      <view>{{shopdata.fb_zan}}</view>
+      <image src='../../images/Like-3Copy2S.png' wx:if='{{shopdata.good==1}}' bindtap='zan' data-fbid='{{shopdata.fb_id}}' data-fbtype='praise'></image>
+      <image src='../../images/Like-3.png' wx:if='{{shopdata.good==0}}' bindtap='zan' data-fbid='{{shopdata.fb_id}}' data-fbtype='praise'></image>
     </view>
     <view class='img-box'>
-      <image src='../../images/Like-3Copy4D.png' wx:if='{{shopdata.good==2}}'></image>
-      <image src='../../images/Like-3Copy.png' wx:if='{{shopdata.good==0}}'></image>
+     <view>{{shopdata.fb_cai}}</view>
+      <image src='../../images/Like-3Copy4D.png' wx:if='{{shopdata.good2==1}}' bindtap='zan' data-fbid='{{shopdata.fb_id}}' data-fbtype='stamp'></image>
+      <image src='../../images/Like-3Copy.png' wx:if='{{shopdata.good2==0}}' bindtap='zan' data-fbid='{{shopdata.fb_id}}' data-fbtype='stamp'></image>
     </view>
     <view class='yellow' bindtap='openphone' data-phone='{{shopdata.fb_contact_phone}}'>拨打电话</view>
-    <view>发送短信</view>
+    <!-- <view>发送短信</view> -->
   </view>
 </view>

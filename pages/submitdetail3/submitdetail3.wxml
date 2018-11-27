@@ -17,15 +17,15 @@
       标题
     </view>
     <view class='text'>
-      <input placeholder='标题' name='fb_title'></input>
+      <input placeholder='请输入职业(工种)' name='fb_title'></input>
     </view>
   </view>
   <view class='box'>
     <view class='title' style='height:auto;margin:0 20rpx'>
-      职务
+      月薪(元/月)
     </view>
     <view class='text'>
-      <input placeholder='请输入职务' name="fbc3_zhiwei"></input>
+      <input placeholder='请输入金额 月/元' name="fb_price"></input>
     </view>
   </view>
   <view class='box'>

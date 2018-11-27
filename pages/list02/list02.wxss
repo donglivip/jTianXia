@@ -1,0 +1,94 @@
+/* pages/list/list.wxss */
+.list{
+  background: #f4f4f4
+}
+.list-top{
+  height: 100rpx;
+  background: #ffffff;
+  display: flex;
+  align-items: center
+}
+.list-top image{
+  width: 20rpx;
+  height: 30rpx;
+  margin: 0 20rpx;
+}
+.list-top view{
+  flex: 1;
+  text-indent: 20rpx
+}
+.list-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.list-item{
+  width: 370rpx;
+  background: #ffffff;
+  box-sizing: border-box;
+  margin: 10rpx 0
+
+}
+.list-item image{
+  width: 320rpx;
+  height: 320rpx;
+  margin: 20rpx auto;
+  display: block
+}
+.title{
+  font-size: 30rpx;
+  text-indent: 20rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+  line-height: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.subtitle{
+  text-indent: 20rpx;
+  color: #999999;
+  height: 30rpx;
+  line-height:30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 24rpx
+}
+.price{
+  text-indent: 20rpx;
+  color: red;
+  font-size: 36rpx;
+  font-weight: 600;
+  margin: 10rpx 0 20rpx 0
+}
+.img-box{
+  position: relative
+}
+.mark{
+  position: absolute;
+  bottom: 0rpx;
+  right: 25rpx;
+  color: #ffffff;
+  background: #FF9222;
+  padding: 3rpx 8rpx;
+  font-size: 20rpx
+}
+.mark02{
+  width: 80rpx!important;
+  height: 80rpx!important;
+  position: absolute;
+  top: -20rpx;
+  left: 25rpx
+}
+.red{
+  background: red
+}
+.tcenter{
+  text-align: center;
+  height: 100%;
+  line-height: 100rpx
+}
+.active{
+  border-bottom: 2rpx solid #FF9222
+}

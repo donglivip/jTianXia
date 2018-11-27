@@ -11,9 +11,9 @@ Page({
     imgurl: app.globalData.imgUrl,
     xinxi_lists: [],
     fb_id: 0,
+    mytype: 1,
     category: [],
     fbc_status: [{ "1": ['急售', '待售'], "2": ['待租', '忙碌', "空闲"], "3": ["工程项目", "招聘", "求职"], "4": ["待租", "忙碌", "空闲"], "100": ['空'] }]
-
 
   },
   opennew: function (event) {
@@ -89,7 +89,18 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
+  changeindex: function (event){
+    var fb_id = event.currentTarget.dataset.id
+    this.setData({
+      mytype:fb_id
+    })
+    this.myajax()
+  },
   onShow: function () {
+    this.myajax()
+
+  },
+  myajax:function(){
     var options = wx.getStorageSync('options')
     //console.log(options)
 
@@ -106,12 +117,13 @@ Page({
       var region2 = cp2 + ',' + region['city_id']
     }
 
-    var typeId = 2;
 
     wx.request({
-      url: app.globalData.apiUrl + '/api/fbapi/send_list/?region=' + region2 + '&fb_category_id=' + fl_id + '&typeId=' + typeId,
+      url: app.globalData.apiUrl + '/api/fbapi/send_list/?region=' + region2 + '&fb_category_id=' + fl_id + '&typeId=' + that.data.mytype,
       method: 'get',
-      data: {},
+      data: {
+
+      },
       header: {
         'content-type': 'application/json'
       },
@@ -119,33 +131,6 @@ Page({
         if (res.statusCode = 200) {
           console.log(res.data)
           var xx_list = res.data
-          // xx_list.forEach(function (item, index) {
-          //   var model = res.data.category.category_info_model
-          //   switch (model) {
-          //     case '1':
-          //       c_status = item.fbc1_status - 1
-          //       c_price_dw = '万元'
-          //       break;
-          //     case '2':
-          //       c_status = item.fbc2_state - 1 || 0
-          //       c_price_dw = '元/小时'
-          //       break;
-          //     case '4':
-          //       c_status = item.fbc4_state - 1
-          //       c_price_dw = '元/公里'
-          //       break;
-          //     default:
-          //       model = '100'
-          //       c_status = 0
-          //       c_price_dw = ''
-          //   }
-
-          //   //var c_status = item.fbc1_status || item.fbc2_status || item.fbc4_status||101
-          //   var fbc_status_text = that.data.fbc_status[0][model][c_status]
-          //   xx_list[index]['fbc_status_text'] = fbc_status_text
-          //   xx_list[index]['c_price_dw'] = c_price_dw
-          //   console.log(xx_list)
-          // })
           that.setData({
             xinxi_lists: xx_list,
             category: res.data.category
@@ -154,9 +139,7 @@ Page({
         }
       }
     })
-
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */

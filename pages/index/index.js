@@ -30,9 +30,16 @@ Page({
   opennav: function (event) {
     //console.log(event)
     var flid = event.currentTarget.dataset.flid
-    wx.navigateTo({
-      url: '../' + event.currentTarget.dataset.id + '/' + event.currentTarget.dataset.id + '?name=' + event.currentTarget.dataset.name + '&flid=' + flid
-    })
+    if (event.currentTarget.dataset.name =='招聘/求职'){
+      wx.navigateTo({
+        url: '../list02/list02?name=' + event.currentTarget.dataset.name + '&flid=' + flid
+      })
+    }else{
+      wx.navigateTo({
+        url: '../' + event.currentTarget.dataset.id + '/' + event.currentTarget.dataset.id + '?name=' + event.currentTarget.dataset.name + '&flid=' + flid
+      })
+    }
+   
   },
   openimgad: function (event) {
     //wx.setStorage({ key: 'sj_data', data: this.data.shangjia_lists[event.currentTarget.dataset.name] })

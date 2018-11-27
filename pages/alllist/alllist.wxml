@@ -2,7 +2,7 @@
   <block wx:for="{{all_list}}" wx:key="unique">
   <view class='submit-box' bindtap='openfenlei' data-id='list' data-flid='{{item.category_id}}'>
     <image src='{{imgurl+item.category_img_path2}}' class='logo'></image>
-    <view class='text'>{{item.category_name}}{{index}}</view>
+    <view class='text'>{{item.category_name}}</view>
     <image src='../../images/Arrow_simple_rightt Copy 14.png' class='arr'></image>
   </view>
   </block>

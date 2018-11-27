@@ -24,6 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   getUserInfo: function (e) {
+    console.log(e)
     wx.setStorageSync('uname', e.detail.userInfo.nickName)
     wx.setStorageSync('uavatar', e.detail.userInfo.avatarUrl)
     app.globalData.userInfo = e.detail.userInfo
