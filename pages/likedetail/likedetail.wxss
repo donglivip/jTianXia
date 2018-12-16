@@ -47,3 +47,4 @@ swiper image{
   text-align: right;
   margin-right: 20rpx
 }
+swiper{height: 550rpx}

@@ -17,7 +17,7 @@
     </view>
     <view class='box' style='margin-top:20rpx'>
       <view class='title'>
-        店铺内容
+        内容
       </view>
       <view class='text'>
         {{shangjia['shangjia_name']}}

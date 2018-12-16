@@ -64,13 +64,7 @@
         <image src="{{imgurl + img_ad2[0]['shangjia_img_path']}}"></image>
       </view>
     </view>
-    <view class='adver01' bindtap='openimgad' data-id='likedetail' data-name="3">
-      <view class='adver-box'>
-        <view class='adver-title'>{{img_ad3[0]['shangjia_title']}}</view>
-        <view class='adver-text'></view>
-        <image src="{{imgurl + img_ad3[0]['shangjia_img_path']}}"></image>
-      </view>
-    </view>
+
     <view class='mytitle' bindtap='opennew' data-id='likelist'>
       <view>猜你喜欢</view>
       <image src='../../images/arrright02.png'></image>
@@ -80,10 +74,10 @@
       <image src="{{imgurl + item['shangjia_img_path']}}"></image>
       <view class='shop-main'>
         <view class='shop-title'>{{item['shangjia_title']}}</view>
-        <view class='shop-sub'>店铺名称：{{item['shangjia_name']}}</view>
+        <view class='shop-sub'>{{item['shangjia_name']}}</view>
         <!--view class='shop-sub'>商家详情：{{item['shangjia_details']}}</view-->
         <view class='shop-sub'>
-          <view>地址：{{item['shangjia_address']}}</view>
+          <view>{{item['shangjia_address']}}</view>
           <!--view>518km</view-->
         </view>
       </view>

@@ -1,15 +1,15 @@
 <view class='wrapper adress'>
-  <scroll-view class='adress-one'>
+  <scroll-view class='adress-one' scroll-y='true'>
     <view class="one-item {{oneindex==idx?'active':''}}" wx:for='{{citydata}}' wx:for-index='idx' bindtap='onechange' data-index='{{idx}}' data-cityid='{{item.city_id}}' data-ctiypath="{{city_path+','+item.city_id}}" wx:key="unique">
         {{item.name}}
     </view>
   </scroll-view>
-  <scroll-view class='adress-two'>
+  <scroll-view class='adress-two' scroll-y='true'>
     <view class="one-item {{twoindex==idx?'active':''}}"  wx:for='{{citydata[oneindex].citydata}}' wx:for-index='idx' bindtap='twochange' data-index='{{idx}}' data-cityid='{{item.city_id}}' wx:key="unique">
         {{item.name}}
      </view>
   </scroll-view>
-  <scroll-view class='adress-three'>
+  <scroll-view class='adress-three' scroll-y='true'>
    <view class="one-item {{threeindex==idx?'active':''}}"  wx:for='{{citydata[oneindex].citydata[twoindex].citydata}}' wx:for-index='idx' bindtap='threechange' data-index='{{idx}}' data-cityid='{{item.city_id}}' wx:key="unique">
         {{item.name}}
     </view>

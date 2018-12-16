@@ -160,6 +160,7 @@ swiper image{
   display: flex;
   background: #fff;
   padding: 20rpx;
+  border-top: 1rpx solid #f4f4f4
 }
 .shop-box image{
   width: 180rpx;
@@ -170,15 +171,25 @@ swiper image{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #686868
+  color: #686868;
+  font-size: 34rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
 }
 .shop-main{
-  flex: 1
+  flex: 1;
+  overflow: hidden
 }
 .shop-title{
-  font-size: 28rpx;
-  line-height: 30rpx;
-  height:60rpx;
+  font-size: 36rpx;
+  line-height: 40rpx;
+  height:80rpx;
   overflow: hidden;
-  margin-bottom: 15rpx
+  margin-bottom: 15rpx;
+}
+.adver-box:nth-of-type(1){
+  margin-right: 5rpx
 }
