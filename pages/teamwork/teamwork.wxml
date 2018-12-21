@@ -4,14 +4,12 @@
       <image src='../../images/Chart-12Q.png'></image>
       <view class='shop-main'>
         <view class='shop-title'>商业推广</view>
-        <view class='shop-sub'>测试信息测试信息信息试信息测试信息</view>
       </view>
     </view>
     <view class='shop-box' bindtap='opennew' data-id='teamworkdetail' wx:for="{{all_list}}" data-categoryTd='{{item.category_id}}'>
       <image src='{{imgurl + item.category_img_path}}'></image>
       <view class='shop-main'>
         <view class='shop-title'>{{item.category_name}}</view>
-        <view class='shop-sub'>测试信息测试信息信息试信息测试信息</view>
       </view>
     </view>
     

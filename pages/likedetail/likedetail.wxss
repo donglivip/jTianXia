@@ -36,7 +36,6 @@ swiper image{
 }
 .box{
   display: flex;
-  height: 100rpx;
   align-items: center;
   width: 100%;
   background: #ffffff;

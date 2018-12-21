@@ -52,13 +52,13 @@
         联系经理
       </view>
     </view>
-    <view class='adver01'>
-      <view class='adver-box' bindtap='openimgad' data-id='likedetail' data-name="1">
+    <view class='adver01' wx:if="">
+      <view class='adver-box' bindtap='openimgad' data-id='likedetail' data-name="1" wx:if="img_ad1!=''">
         <view class='adver-title'>{{img_ad1[0]['shangjia_title']}}</view>
         <view class='adver-text'></view>
         <image src="{{imgurl + img_ad1[0]['shangjia_img_path']}}"></image>
       </view>
-      <view class='adver-box' bindtap='openimgad' data-id='likedetail' data-name="2">
+      <view class='adver-box' bindtap='openimgad' data-id='likedetail' data-name="2" wx:if="img_ad2!=''">
         <view class='adver-title'>{{img_ad2[0]['shangjia_title']}}</view>
         <view class='adver-text'></view>
         <image src="{{imgurl + img_ad2[0]['shangjia_img_path']}}"></image>

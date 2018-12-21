@@ -1,6 +1,6 @@
 /* pages/likedetail/likedetail.wxss */
 swiper{
-  height: 300rpx
+  height: 390rpx
 }
 swiper image{
   width: 100%;

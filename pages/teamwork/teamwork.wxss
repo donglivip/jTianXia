@@ -171,6 +171,8 @@ swiper image{
 }
 .shop-main{
   flex: 1;
+  display: flex;
+  align-items: center
 }
 .shop-title{
   font-size: 30rpx;

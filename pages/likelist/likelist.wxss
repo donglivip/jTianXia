@@ -175,7 +175,7 @@ swiper image{
 }
 .shop-title{
   font-size: 32rpx;
-  line-height: 32rpx;
-  height:84rpx;
+  line-height: 30rpx;
+  height:120rpx;
   overflow: hidden;
 }

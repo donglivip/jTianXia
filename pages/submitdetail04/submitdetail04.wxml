@@ -9,6 +9,9 @@
       <image src='../../images/addimg.png' bindtap='changeimg'></image>
     </view>
   </view>
+    <view class='box' style='text-indent:10rpx;border-top:1px solid #f4f4f4'>
+    为了达到最好效果，请将手机横着拍摄。
+  </view>
   <view class='box' style='margin-top:20rpx'>
     <view class='title'>
       设备信息
