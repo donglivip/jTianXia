@@ -5,7 +5,7 @@
   </view>
   <view class='list-box'>
     <block wx:for="{{xinxi_lists}}" wx:key="unique">
-    <view class='list-item' bindtap='opennew' data-id='shopdetail' data-fbid='{{item.fb_id}}' data-title='{{title}}'>
+    <view class='list-item' bindtap='opennew' data-id='shopdetail1' data-fbid='{{item.fb_id}}' data-title='{{title}}'>
       <view class='img-box'>
         <!--image src='../../images/Group10@3x.png' class='mark02'></image-->
         <image src='{{imgurl+item.fb_img}}'></image>

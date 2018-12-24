@@ -1,0 +1,61 @@
+<!--pages/shopdetail/shopdetail3.wxml-->
+<view class='wrapper likedetail'>
+  <scroll-view class='main' style='margin:0' scroll-y>
+    <swiper indicator-dots='true' indicator-active-color='#FF9222' autoplay='3000'>
+      <block wx:for="{{shopdata['imagelist']}}" wx:key="unique">
+      <swiper-item>
+        <image src='{{imgurl+item}}'></image>
+      </swiper-item>
+      </block>
+    </swiper>
+    <view class='title' style='font-size:40rpx'>
+      {{shopdata.fb_title}}
+    </view>
+    <view class='title'>
+      {{shopdata.fb_create_time}}
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        内容描述
+      </view>
+    </view>
+    <view class='box'>
+      <view class='' style='margin-left:10px;'>
+        {{shopdata.fb_body}}
+      </view>
+    </view>
+    <view class='box' style='margin-top:20rpx'>
+      <view class='title'>
+        联系人信息
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title'>
+        联系人
+      </view>
+      <view class='text'>
+        {{shopdata.fb_contact}}
+      </view>
+    </view>
+    <view class='box'>
+      <view class='title' bindtap='callman'>
+        联系电话
+      </view>
+      <view class='text'>
+        {{shopdata.fb_phone}}
+      </view>
+    </view>
+  </scroll-view>
+  <view class='bottom'>
+    <view class='img-box'>
+      <image src='../../images/Like-3Copy2S.png' wx:if='{{shopdata.good==1}}'></image>
+      <image src='../../images/Like-3.png' wx:if='{{shopdata.good==0}}' bindtap='zan' data-fbid='{{shopdata.fb_id}}' data-fbtype='praise'></image>
+    </view>
+    <view class='img-box'>
+      <image src='../../images/Like-3Copy4D.png' wx:if='{{shopdata.good2==1}}'></image>
+      <image src='../../images/Like-3Copy.png' wx:if='{{shopdata.good2==0}}' bindtap='zan' data-fbid='{{shopdata.fb_id}}' data-fbtype='stamp'></image>
+    </view>
+    <view class='yellow' bindtap='openphone' data-phone='{{shopdata.fb_contact_phone}}'>拨打电话</view>
+    <view>发送短信</view>
+  </view>
+</view>
