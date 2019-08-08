@@ -13,8 +13,6 @@ Page({
     fb_id: 0,
     category: [],
     fbc_status: [{ "1": ['急售', '待售'], "2": ['待租', '忙碌', "空闲"], "3": ["工程项目", "招聘", "求职"], "4": ["待租", "忙碌", "空闲"], "100": ['空'] }]
-
-
   },
   opennew: function (event) {
     var fb_id = event.currentTarget.dataset.fbid
